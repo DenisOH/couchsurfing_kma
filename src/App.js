@@ -1,8 +1,8 @@
 import React from 'react';
-import {BrowserRouter as Router, Route} from "react-router-dom";
-import {AnimatedSwitch} from 'react-router-transition';
+import {BrowserRouter as Router, Route, Switch} from "react-router-dom";
 
 import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
 
 import './App.css';
 
@@ -10,26 +10,26 @@ function App() {
   return (
     <>
       <Router basename="/couchsurfing_kma">
-        <Navbar />
-        <AnimatedSwitch
-          atEnter={{ opacity: 0 }}
-          atLeave={{ opacity: 0 }}
-          atActive={{ opacity: 1 }}
-          className="switch-wrapper"
-        >
-          <Route exact path="/">
-            <p>Main</p>
-          </Route>
-          <Route path="/about">
-            <p>About</p>
-          </Route>
-          <Route path="/register">
-            <p>Register</p>
-          </Route>
-          <Route path="/login">
-            <p>Login</p>
-          </Route>
-        </AnimatedSwitch>
+        <div className="content">
+          <Navbar />
+          <Switch>
+            <Route exact path="/">
+              <p>Main</p>
+            </Route>
+            <Route path="/about">
+              <p>About</p>
+            </Route>
+            <Route path="/register">
+              <p>Register</p>
+            </Route>
+            <Route path="/login">
+              <p>Login</p>
+            </Route>
+          </Switch>
+        </div>
+        <div className="footer">
+          <Footer />
+        </div>
       </Router>
     </>
   );
