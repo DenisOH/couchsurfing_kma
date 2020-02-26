@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/couchsurfing_kma/static/css/main.8df6df0c.chunk.css",
-    "main.js": "/couchsurfing_kma/static/js/main.cf3377cd.chunk.js",
-    "main.js.map": "/couchsurfing_kma/static/js/main.cf3377cd.chunk.js.map",
+    "main.js": "/couchsurfing_kma/static/js/main.d4db9720.chunk.js",
+    "main.js.map": "/couchsurfing_kma/static/js/main.d4db9720.chunk.js.map",
     "runtime-main.js": "/couchsurfing_kma/static/js/runtime-main.3859c8bf.js",
     "runtime-main.js.map": "/couchsurfing_kma/static/js/runtime-main.3859c8bf.js.map",
     "static/js/2.ababff0a.chunk.js": "/couchsurfing_kma/static/js/2.ababff0a.chunk.js",
     "static/js/2.ababff0a.chunk.js.map": "/couchsurfing_kma/static/js/2.ababff0a.chunk.js.map",
     "index.html": "/couchsurfing_kma/index.html",
-    "precache-manifest.4b90ac86fc218ccba3754f6bdf5e1768.js": "/couchsurfing_kma/precache-manifest.4b90ac86fc218ccba3754f6bdf5e1768.js",
+    "precache-manifest.dc486bcd77e7aa77be1d3cbfc564a0bf.js": "/couchsurfing_kma/precache-manifest.dc486bcd77e7aa77be1d3cbfc564a0bf.js",
     "service-worker.js": "/couchsurfing_kma/service-worker.js",
     "static/css/main.8df6df0c.chunk.css.map": "/couchsurfing_kma/static/css/main.8df6df0c.chunk.css.map",
     "static/js/2.ababff0a.chunk.js.LICENSE.txt": "/couchsurfing_kma/static/js/2.ababff0a.chunk.js.LICENSE.txt"
@@ -17,6 +17,6 @@
     "static/js/runtime-main.3859c8bf.js",
     "static/js/2.ababff0a.chunk.js",
     "static/css/main.8df6df0c.chunk.css",
-    "static/js/main.cf3377cd.chunk.js"
+    "static/js/main.d4db9720.chunk.js"
   ]
 }
