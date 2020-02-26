@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/couchsurfing_kma/static/css/main.d1b05096.chunk.css",
+    "main.js": "/couchsurfing_kma/static/js/main.884cd5d1.chunk.js",
+    "main.js.map": "/couchsurfing_kma/static/js/main.884cd5d1.chunk.js.map",
+    "runtime-main.js": "/couchsurfing_kma/static/js/runtime-main.3859c8bf.js",
+    "runtime-main.js.map": "/couchsurfing_kma/static/js/runtime-main.3859c8bf.js.map",
+    "static/js/2.f4b01e20.chunk.js": "/couchsurfing_kma/static/js/2.f4b01e20.chunk.js",
+    "static/js/2.f4b01e20.chunk.js.map": "/couchsurfing_kma/static/js/2.f4b01e20.chunk.js.map",
+    "index.html": "/couchsurfing_kma/index.html",
+    "precache-manifest.083fb79c5a66e7c8539c3dbf1879906b.js": "/couchsurfing_kma/precache-manifest.083fb79c5a66e7c8539c3dbf1879906b.js",
+    "service-worker.js": "/couchsurfing_kma/service-worker.js",
+    "static/css/main.d1b05096.chunk.css.map": "/couchsurfing_kma/static/css/main.d1b05096.chunk.css.map",
+    "static/js/2.f4b01e20.chunk.js.LICENSE.txt": "/couchsurfing_kma/static/js/2.f4b01e20.chunk.js.LICENSE.txt",
+    "static/media/logo.svg": "/couchsurfing_kma/static/media/logo.5d5d9eef.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.3859c8bf.js",
+    "static/js/2.f4b01e20.chunk.js",
+    "static/css/main.d1b05096.chunk.css",
+    "static/js/main.884cd5d1.chunk.js"
+  ]
+}
