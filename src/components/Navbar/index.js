@@ -1,6 +1,6 @@
 import React from "react";
-import {NavLink} from "react-router-dom";
-import { makeStyles } from '@material-ui/core/styles';
+import {Link, NavLink} from "react-router-dom";
+import {makeStyles} from "@material-ui/core/styles";
 import AppBar from "@material-ui/core/AppBar";
 import Toolbar from "@material-ui/core/Toolbar";
 import Typography from "@material-ui/core/Typography";
@@ -9,6 +9,7 @@ import MenuIcon from '@material-ui/icons/Menu';
 import Menu from "@material-ui/core/Menu";
 import MenuItem from "@material-ui/core/MenuItem";
 import NavLinkButton from "../NavLinkButton";
+import Box from "@material-ui/core/Box";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -23,6 +24,9 @@ const useStyles = makeStyles((theme) => ({
   },
   title: {
     flexGrow: 1,
+    '& a': {
+      textDecoration: 'none',
+    },
   },
   desktopLinks: {
     [theme.breakpoints.down("xs")]: {
@@ -54,9 +58,11 @@ export default function Navbar() {
     <div className={classes.root}>
       <AppBar position="static" className={classes.appbar}>
         <Toolbar>
-          <Typography variant="h6" color="primary" className={classes.title}>
-            KMA CouchSurfing
-          </Typography>
+          <Box component="div" className={classes.title}>
+            <Typography component={Link} to="/" variant="h6" color="primary">
+              KMA CouchSurfing
+            </Typography>
+          </Box>
           <div className={classes.desktopLinks}>
             <NavLinkButton className={classes.menuButton} to="/about">Про проект</NavLinkButton>
             <NavLinkButton className={classes.menuButton} to="/register">Реєстрація</NavLinkButton>
