@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "bb4ebc6f43bb0536565ec444ddb500fb",
+    "revision": "ac93786668356474707c98a50ee166ad",
     "url": "/couchsurfing_kma/index.html"
   },
   {
-    "revision": "bad3caaa3d0dde00daed",
+    "revision": "ca6a0faa76a80fc8aabf",
     "url": "/couchsurfing_kma/static/css/main.7e81d27e.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/couchsurfing_kma/static/js/2.c6a740bd.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "bad3caaa3d0dde00daed",
-    "url": "/couchsurfing_kma/static/js/main.17eba1fe.chunk.js"
+    "revision": "ca6a0faa76a80fc8aabf",
+    "url": "/couchsurfing_kma/static/js/main.555078a4.chunk.js"
   },
   {
     "revision": "abec9312d606076ca587",
