@@ -18,7 +18,7 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 export default function NavLinkButton(props) {
-  const styles = useStyles();
+  const classes = useStyles();
   const {className, to, children} = props;
 
   return (
@@ -28,7 +28,7 @@ export default function NavLinkButton(props) {
       component={NavLink}
       to={to}
       className={className}
-      activeClassName={`MuiButton-contained ${styles.containedButton}`}
+      activeClassName={`MuiButton-contained ${classes.containedButton}`}
     >
       <Typography color="inherit" style={{fontWeight: 600}}>{children}</Typography>
     </Button>

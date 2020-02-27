@@ -3,6 +3,7 @@ import {BrowserRouter as Router, Route, Switch} from "react-router-dom";
 
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
+import Login from "./containers/Login";
 
 import './App.css';
 
@@ -23,7 +24,7 @@ function App() {
               <p>Register</p>
             </Route>
             <Route path="/login">
-              <p>Login</p>
+              <Login />
             </Route>
           </Switch>
         </div>

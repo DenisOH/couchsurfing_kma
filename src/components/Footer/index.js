@@ -24,18 +24,18 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 export default function Footer() {
-  const styles = useStyles();
+  const classes = useStyles();
 
   return (
-    <Box component="div" p={3} className={styles.footer}>
+    <Box component="div" p={3} className={classes.footer}>
       <Box component="div" p={2}>
-        <a href="https://facebook.com/" className={styles.iconLink}>
-          <FacebookIcon fontSize="large" className={styles.footerIcon} />
+        <a href="https://facebook.com/" className={classes.iconLink}>
+          <FacebookIcon fontSize="large" className={classes.footerIcon} />
         </a>
-        <a href="https://telegram.org/" className={styles.iconLink}>
-          <TelegramIcon fontSize="large" className={styles.footerIcon} />
+        <a href="https://telegram.org/" className={classes.iconLink}>
+          <TelegramIcon fontSize="large" className={classes.footerIcon} />
         </a>
-        <a href="https://instagram.com/" className={styles.iconLink}>
+        <a href="https://instagram.com/" className={classes.iconLink}>
           <InstagramIcon fontSize="large" />
         </a>
       </Box>
