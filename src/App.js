@@ -6,6 +6,7 @@ import Footer from "./components/Footer";
 import Main from "./containers/Main";
 import Login from "./containers/Login";
 import Register from "./containers/Register";
+import About from "./containers/About";
 
 import './App.css';
 
@@ -19,7 +20,7 @@ function App() {
             <Main />
           </Route>
           <Route path="/about">
-            <p>About</p>
+            <About />
           </Route>
           <Route path="/register">
             <Register />

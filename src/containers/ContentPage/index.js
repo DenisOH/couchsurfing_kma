@@ -5,7 +5,7 @@ import Box from "@material-ui/core/Box";
 export default function ContentPage(props) {
   const {children} = props;
   return (
-    <Box component="div" px={3} mt={10}>
+    <Box component="div" px={3} mt={10} style={{overflow: "hidden"}}>
       {children}
     </Box>
   )
