@@ -5,18 +5,14 @@ import Typography from "@material-ui/core/Typography";
 import {makeStyles} from "@material-ui/core/styles";
 import Button from "../../components/Button";
 import ContentPage from "../ContentPage";
+import MainBackground from "../../img/main-background.png";
 
 const useStyles = makeStyles((theme) => ({
   container: {
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'center',
-    [theme.breakpoints.up("sm")]: {
-      marginBottom: theme.spacing(24),
-    },
-    [theme.breakpoints.down("xs")]: {
-      marginBottom: theme.spacing(12),
-    },
+    marginBottom: theme.spacing(8),
   },
   title: {
     fontWeight: 300,
@@ -26,7 +22,14 @@ const useStyles = makeStyles((theme) => ({
     [theme.breakpoints.up("sm")]: {
       width: '50%',
     },
-  }
+  },
+  backgroundImage: {
+    position: "absolute",
+    zIndex: "-1",
+    right: 0,
+    bottom: 0,
+    height: "75vh",
+  },
 }));
 
 export default function Main() {
@@ -45,6 +48,7 @@ export default function Main() {
           <Button>Приєднатись</Button>
         </NavLink>
       </Container>
+      <img className={classes.backgroundImage} src={MainBackground} />
     </ContentPage>
   )
 }
