@@ -33,7 +33,7 @@ export default function Login() {
       <Container maxWidth="sm" className={classes.container}>
         <Typography className={classes.title} align="center" variant="h5">Увійдіть в KMA CouchSurfing</Typography>
         <TextField className={classes.input} id="username" label="Електронна пошта" type="email" variant="outlined" fullWidth autoFocus required />
-        <TextField className={classes.input} id="password" label="Пароль" type="password" variant="outlined" fullWidth autoFocus required />
+        <TextField className={classes.input} id="password" label="Пароль" type="password" variant="outlined" fullWidth required />
         <Button className={classes.button}>Увійти</Button>
       </Container>
     </ContentPage>

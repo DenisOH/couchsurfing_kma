@@ -33,9 +33,9 @@ export default function Register() {
       <Container maxWidth="sm" className={classes.container}>
         <Typography className={classes.title} align="center" variant="h5">Зареєструйтеся в KMA CouchSurfing</Typography>
         <TextField className={classes.input} id="full_name" label="Повне ім'я" type="text" variant="outlined" fullWidth autoFocus required />
-        <TextField className={classes.input} id="username" label="Електронна пошта" type="email" variant="outlined" fullWidth autoFocus required />
-        <TextField className={classes.input} id="phone" label="Телефон" type="text" variant="outlined" fullWidth autoFocus required />
-        <TextField className={classes.input} id="password" label="Пароль" type="password" variant="outlined" fullWidth autoFocus required />
+        <TextField className={classes.input} id="username" label="Електронна пошта" type="email" variant="outlined" fullWidth required />
+        <TextField className={classes.input} id="phone" label="Телефон" type="text" variant="outlined" fullWidth required />
+        <TextField className={classes.input} id="password" label="Пароль" type="password" variant="outlined" fullWidth required />
         <Button className={classes.button}>Зареєструватися</Button>
       </Container>
     </ContentPage>
