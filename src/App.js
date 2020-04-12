@@ -5,6 +5,7 @@ import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import Main from "./containers/Main";
 import Login from "./containers/Login";
+import Register from "./containers/Register";
 
 import './App.css';
 
@@ -21,7 +22,7 @@ function App() {
             <p>About</p>
           </Route>
           <Route path="/register">
-            <p>Register</p>
+            <Register />
           </Route>
           <Route path="/login">
             <Login />

@@ -48,7 +48,7 @@ export default function Main() {
           <Button>Приєднатись</Button>
         </NavLink>
       </Container>
-      <img className={classes.backgroundImage} src={MainBackground} />
+      <img className={classes.backgroundImage} src={MainBackground} alt="background"/>
     </ContentPage>
   )
 }
