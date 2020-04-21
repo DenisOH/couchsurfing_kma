@@ -8,6 +8,7 @@ import Login from "./containers/Login";
 import Register from "./containers/Register";
 import About from "./containers/About";
 import Listings from "./containers/Listings";
+import DetailedListing from "./containers/DetailedListing";
 
 import './App.css';
 
@@ -28,6 +29,9 @@ function App() {
           </Route>
           <Route path="/login">
             <Login />
+          </Route>
+          <Route path="/listings/:id">
+            <DetailedListing />
           </Route>
           <Route path="/listings">
             <Listings />

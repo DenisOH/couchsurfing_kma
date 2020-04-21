@@ -110,7 +110,7 @@ export default function Listing(props) {
         </div>
         <div className={classes.userSection}>
           <div className={classes.userPhoto}>
-            <Avatar className={classes.pink}>
+            <Avatar>
               <PersonIcon />
             </Avatar>
             <span>{props.user.name}</span>
