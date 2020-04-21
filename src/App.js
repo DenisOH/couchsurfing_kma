@@ -10,12 +10,13 @@ import Register from "./containers/Register";
 import About from "./containers/About";
 import Listings from "./containers/Listings";
 import DetailedListing from "./containers/DetailedListing";
+import Profile from "./containers/Profile";
 
 import './App.css';
 
 const authViews = [
   "#/listings",
-  "#/profile",
+  "#/profiles",
 ];
 
 const isAuthed = (loc) => {
@@ -29,7 +30,7 @@ const isAuthed = (loc) => {
 
 function App() {
   const history = createBrowserHistory();
-  const [isAuthenticated, setIsAuthenticated] = React.useState(false);
+  const [isAuthenticated, setIsAuthenticated] = React.useState(isAuthed(window.location.hash));
 
   history.listen( location =>  {
     if (isAuthed(location.hash)) {
@@ -61,6 +62,9 @@ function App() {
           </Route>
           <Route path="/listings">
             <Listings />
+          </Route>
+          <Route path="/profiles/:id">
+            <Profile />
           </Route>
         </Switch>
       </div>

@@ -74,7 +74,7 @@ export default function Navbar(props) {
               ): (
               <>
                 <NavLinkButton className={classes.menuButton} to="/listings">Житла</NavLinkButton>
-                <NavLinkButton className={classes.menuButton} to="/profile">Профіль</NavLinkButton>
+                <NavLinkButton className={classes.menuButton} to="/profiles/1">Профіль</NavLinkButton>
               </>
             )}
           </div>

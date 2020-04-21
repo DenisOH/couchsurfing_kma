@@ -81,7 +81,6 @@ const useStyles = makeStyles((theme) => ({
     bottom: "5vh",
     right: "5vh",
     zIndex: "2000"
-
   },
   extendedIcon: {
     marginRight: theme.spacing(1),
