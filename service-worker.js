@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/couchsurfing_kma/precache-manifest.a02e8c32a9689263c7bb6eb92c5338e7.js"
+  "/couchsurfing_kma/precache-manifest.e2710c30895a5ba78e9bf2b4c65b531b.js"
 );
 
 self.addEventListener('message', (event) => {
