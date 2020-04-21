@@ -15,6 +15,7 @@ import HotelIcon from '@material-ui/icons/Hotel';
 import BathtubIcon from '@material-ui/icons/Bathtub';
 import Fab from "@material-ui/core/Fab";
 import EditIcon from '@material-ui/icons/Edit';
+import {Map, Marker, TileLayer} from "react-leaflet";
 
 const detailedListingsPlaceholder = {
   1: {
@@ -27,6 +28,7 @@ const detailedListingsPlaceholder = {
     ],
     'description': "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo laudantium molestiae quibusdam voluptatem voluptates! Eius quae, ullam? Aliquam aperiam architecto assumenda corporis culpa, enim eveniet inventore itaque iure, nemo nostrum obcaecati odit perspiciatis provident quidem sapiente unde veritatis voluptas. Ea et id incidunt minima numquam quas quisquam rerum. Atque autem eius et eum excepturi hic in laudantium nulla pariatur reiciendis.",
     'specifics': ['Wi-Fi', 'тварини дозволяються'],
+    'coords': [49.839663, 24.032774],
     'user': {
       'name': 'Андрій',
       'title': 'Студент ФІ',
@@ -44,6 +46,7 @@ const detailedListingsPlaceholder = {
     ],
     'description': "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo laudantium molestiae quibusdam voluptatem voluptates! Eius quae, ullam? Aliquam aperiam architecto assumenda corporis culpa, enim eveniet inventore itaque iure, nemo nostrum obcaecati odit perspiciatis provident quidem sapiente unde veritatis voluptas. Ea et id incidunt minima numquam quas quisquam rerum. Atque autem eius et eum excepturi hic in laudantium nulla pariatur reiciendis.",
     'specifics': ['Wi-Fi', 'тварини дозволяються'],
+    'coords': [49.839663, 24.032774],
     'user': {
       'name': 'Андрій',
       'title': 'Студент ФІ',
@@ -61,6 +64,7 @@ const detailedListingsPlaceholder = {
     ],
     'description': "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo laudantium molestiae quibusdam voluptatem voluptates! Eius quae, ullam? Aliquam aperiam architecto assumenda corporis culpa, enim eveniet inventore itaque iure, nemo nostrum obcaecati odit perspiciatis provident quidem sapiente unde veritatis voluptas. Ea et id incidunt minima numquam quas quisquam rerum. Atque autem eius et eum excepturi hic in laudantium nulla pariatur reiciendis.",
     'specifics': ['Wi-Fi', 'тварини дозволяються'],
+    'coords': [49.839663, 24.032774],
     'user': {
       'name': 'Андрій',
       'title': 'Студент ФІ',
@@ -75,7 +79,7 @@ const useStyles = makeStyles((theme) => ({
     position: "fixed",
     bottom: "5vh",
     right: "5vh",
-    zIndex: "100"
+    zIndex: "2000"
 
   },
   extendedIcon: {
@@ -109,6 +113,7 @@ const useStyles = makeStyles((theme) => ({
   mainDescription: {
     display: "flex",
     flexWrap: "wrap",
+    marginBottom: theme.spacing(4),
   },
   left: {
     display: "flex",
@@ -147,10 +152,10 @@ export default function DetailedListing() {
           </Typography>
           <div className={classes.rating}>
             <StarIcon color="primary" fontSize="small" />
-            <Typography color="primary" variant="h7">
+            <Typography color="primary" variant="subtitle">
               {appartmentDetails.user.rating}
             </Typography>
-            <Typography color="primary" variant="h7" style={{marginLeft: "24px"}}>
+            <Typography color="primary" variant="subtitle" style={{marginLeft: "24px"}}>
               {appartmentDetails.location}
             </Typography>
           </div>
@@ -203,6 +208,16 @@ export default function DetailedListing() {
             </div>
           </div>
         </div>
+        <Typography variant="h5" style={{marginBottom: "12px"}}>
+          Розташування
+        </Typography>
+        <Map center={appartmentDetails.coords} zoom={13} style={{height: "400px"}}>
+          <TileLayer
+            attribution='&amp;copy <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+            url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+          />
+          <Marker position={appartmentDetails.coords} />
+        </Map>
       </Container>
     </ContentPage>
   );
