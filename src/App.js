@@ -1,5 +1,6 @@
 import React from 'react';
 import {HashRouter as Router, Route, Switch} from "react-router-dom";
+import { createBrowserHistory } from "history";
 
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
@@ -12,11 +13,36 @@ import DetailedListing from "./containers/DetailedListing";
 
 import './App.css';
 
+const authViews = [
+  "#/listings",
+  "#/profile",
+];
+
+const isAuthed = (loc) => {
+  for (const view of authViews) {
+    if (loc.startsWith(view)) {
+      return true;
+    }
+  }
+  return false;
+};
+
 function App() {
+  const history = createBrowserHistory();
+  const [isAuthenticated, setIsAuthenticated] = React.useState(false);
+
+  history.listen( location =>  {
+    if (isAuthed(location.hash)) {
+      setIsAuthenticated(true);
+    } else {
+      setIsAuthenticated(false);
+    }
+  });
+
   return (
-    <Router basename="/">
+    <Router history={history} basename="/">
       <div className="content">
-        <Navbar />
+        <Navbar isAuthenticated={isAuthenticated} />
         <Switch>
           <Route exact path="/">
             <Main />

@@ -5,6 +5,7 @@ import Typography from "@material-ui/core/Typography";
 import {makeStyles} from "@material-ui/core/styles";
 import ContentPage from "../ContentPage";
 import Button from "../../components/Button";
+import {useHistory} from "react-router-dom";
 
 const useStyles = makeStyles((theme) => ({
   container: {
@@ -27,6 +28,7 @@ const useStyles = makeStyles((theme) => ({
 
 export default function Login() {
   const classes = useStyles();
+  const history = useHistory();
 
   return (
     <ContentPage>
@@ -34,7 +36,7 @@ export default function Login() {
         <Typography className={classes.title} align="center" variant="h5">Увійдіть в KMA CouchSurfing</Typography>
         <TextField className={classes.input} id="username" label="Електронна пошта" type="email" variant="outlined" fullWidth autoFocus required />
         <TextField className={classes.input} id="password" label="Пароль" type="password" variant="outlined" fullWidth required />
-        <Button className={classes.button}>Увійти</Button>
+        <Button className={classes.button} onClick={() => history.push("/listings")}>Увійти</Button>
       </Container>
     </ContentPage>
   )

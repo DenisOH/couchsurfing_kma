@@ -164,10 +164,10 @@ export default function DetailedListing() {
             </Typography>
             <div className={classes.rating}>
               <StarIcon color="primary" fontSize="small" />
-              <Typography color="primary" variant="subtitle">
+              <Typography color="primary" variant="subtitle1">
                 {appartmentDetails.user.rating}
               </Typography>
-              <Typography color="primary" variant="subtitle" style={{marginLeft: "24px"}}>
+              <Typography color="primary" variant="subtitle1" style={{marginLeft: "24px"}}>
                 {appartmentDetails.location}
               </Typography>
             </div>

@@ -5,6 +5,7 @@ import Typography from "@material-ui/core/Typography";
 import {makeStyles} from "@material-ui/core/styles";
 import ContentPage from "../ContentPage";
 import Button from "../../components/Button";
+import {useHistory} from "react-router-dom";
 
 const useStyles = makeStyles((theme) => ({
   container: {
@@ -27,6 +28,8 @@ const useStyles = makeStyles((theme) => ({
 
 export default function Register() {
   const classes = useStyles();
+  const history = useHistory();
+
 
   return (
     <ContentPage>
@@ -36,7 +39,7 @@ export default function Register() {
         <TextField className={classes.input} id="username" label="Електронна пошта" type="email" variant="outlined" fullWidth required />
         <TextField className={classes.input} id="phone" label="Телефон" type="text" variant="outlined" fullWidth required />
         <TextField className={classes.input} id="password" label="Пароль" type="password" variant="outlined" fullWidth required />
-        <Button className={classes.button}>Зареєструватися</Button>
+        <Button className={classes.button} onClick={() => history.push("/listings")}>Зареєструватися</Button>
       </Container>
     </ContentPage>
   )

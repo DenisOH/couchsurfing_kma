@@ -92,7 +92,7 @@ export default function Listing(props) {
             </Typography>
             <div className={classes.rating}>
               <StarIcon color="primary" fontSize="small" />
-              <Typography color="primary" variant="h7">
+              <Typography color="primary" variant="subtitle1">
                 {props.user.rating}
               </Typography>
             </div>
@@ -104,7 +104,7 @@ export default function Listing(props) {
           </div>
         </div>
         <div className={classes.descriptionText}>
-          <Typography variant="h7">
+          <Typography variant="subtitle1">
             {props.description}
           </Typography>
         </div>
@@ -115,7 +115,7 @@ export default function Listing(props) {
             </Avatar>
             <span>{props.user.name}</span>
           </div>
-          <Typography color="primary" className={classes.userTitle} variant="h7">
+          <Typography color="primary" className={classes.userTitle} variant="subtitle1">
             {props.user.title}
           </Typography>
           <div className={classes.interests}>

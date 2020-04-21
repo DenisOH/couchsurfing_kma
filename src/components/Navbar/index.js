@@ -10,6 +10,7 @@ import Menu from "@material-ui/core/Menu";
 import MenuItem from "@material-ui/core/MenuItem";
 import NavLinkButton from "../NavLinkButton";
 import Box from "@material-ui/core/Box";
+import PropTypes from "prop-types";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -41,7 +42,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function Navbar() {
+export default function Navbar(props) {
   const classes = useStyles();
 
   const [anchorEl, setAnchorEl] = React.useState(null);
@@ -64,9 +65,18 @@ export default function Navbar() {
             </Typography>
           </Box>
           <div className={classes.desktopLinks}>
-            <NavLinkButton className={classes.menuButton} to="/about">Про проект</NavLinkButton>
-            <NavLinkButton className={classes.menuButton} to="/register">Реєстрація</NavLinkButton>
-            <NavLinkButton className={classes.menuButton} to="/login">Вхід</NavLinkButton>
+            {!props.isAuthenticated ? (
+              <>
+                <NavLinkButton className={classes.menuButton} to="/about">Про проект</NavLinkButton>
+                <NavLinkButton className={classes.menuButton} to="/register">Реєстрація</NavLinkButton>
+                <NavLinkButton className={classes.menuButton} to="/login">Вхід</NavLinkButton>
+              </>
+              ): (
+              <>
+                <NavLinkButton className={classes.menuButton} to="/listings">Житла</NavLinkButton>
+                <NavLinkButton className={classes.menuButton} to="/profile">Профіль</NavLinkButton>
+              </>
+            )}
           </div>
           <div className={classes.mobileLinks}>
             <IconButton
@@ -94,3 +104,7 @@ export default function Navbar() {
     </div>
   )
 }
+
+Navbar.propTypes = {
+  isAuthenticated: PropTypes.bool,
+};
