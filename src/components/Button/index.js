@@ -4,7 +4,7 @@ import Typography from "@material-ui/core/Typography";
 import PropTypes from "prop-types";
 
 export default function NavLinkButton(props) {
-  const {className, children} = props;
+  const {className, children, onClick} = props;
 
   return (
     <Button
@@ -12,6 +12,7 @@ export default function NavLinkButton(props) {
       type="button"
       size="large"
       variant="contained"
+      onClick={onClick}
       className={className}
     >
       <Typography color="inherit" style={{fontWeight: 600}}>{children}</Typography>
@@ -22,4 +23,5 @@ export default function NavLinkButton(props) {
 NavLinkButton.propTypes = {
   className: PropTypes.string,
   children: PropTypes.node.isRequired,
+  onClick: PropTypes.func,
 };

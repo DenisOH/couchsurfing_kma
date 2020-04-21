@@ -16,6 +16,7 @@ import BathtubIcon from '@material-ui/icons/Bathtub';
 import Fab from "@material-ui/core/Fab";
 import EditIcon from '@material-ui/icons/Edit';
 import {Map, Marker, TileLayer} from "react-leaflet";
+import SendQuery from "../../components/SendQuery";
 
 const detailedListingsPlaceholder = {
   1: {
@@ -138,87 +139,99 @@ export default function DetailedListing() {
   const classes = useStyles();
   const {id} = useParams();
   const appartmentDetails = detailedListingsPlaceholder[id];
+  const [open, setOpen] = React.useState(false);
+
+  const handleClickOpen = () => {
+    setOpen(true);
+  };
+
+  const handleClose = () => {
+    setOpen(false);
+  };
 
   return (
-    <ContentPage>
-      <Fab color="primary" variant="extended" className={classes.action}>
-        <EditIcon className={classes.extendedIcon} />
-        <span className={classes.actionText}>Надіслати запит</span>
-      </Fab>
-      <Container maxWidth="lg">
-        <div className={classes.header}>
-          <Typography variant="h4">
-            {appartmentDetails.title}
-          </Typography>
-          <div className={classes.rating}>
-            <StarIcon color="primary" fontSize="small" />
-            <Typography color="primary" variant="subtitle">
-              {appartmentDetails.user.rating}
+    <>
+      <SendQuery open={open} handleClose={handleClose} />
+      <ContentPage>
+        <Fab color="primary" variant="extended" className={classes.action} onClick={() => handleClickOpen()}>
+          <EditIcon className={classes.extendedIcon} />
+          <span className={classes.actionText}>Надіслати запит</span>
+        </Fab>
+        <Container maxWidth="lg">
+          <div className={classes.header}>
+            <Typography variant="h4">
+              {appartmentDetails.title}
             </Typography>
-            <Typography color="primary" variant="subtitle" style={{marginLeft: "24px"}}>
-              {appartmentDetails.location}
-            </Typography>
+            <div className={classes.rating}>
+              <StarIcon color="primary" fontSize="small" />
+              <Typography color="primary" variant="subtitle">
+                {appartmentDetails.user.rating}
+              </Typography>
+              <Typography color="primary" variant="subtitle" style={{marginLeft: "24px"}}>
+                {appartmentDetails.location}
+              </Typography>
+            </div>
           </div>
-        </div>
-        <Container maxWidth="md">
-          <Carousel>
-            {appartmentDetails.photos.map(pic => (
-              <div key={pic}>
-                <img src={pic} alt="Apartment" className={classes.img}/>
+          <Container maxWidth="md">
+            <Carousel>
+              {appartmentDetails.photos.map(pic => (
+                <div key={pic}>
+                  <img src={pic} alt="Apartment" className={classes.img}/>
+                </div>
+              ))}
+            </Carousel>
+          </Container>
+          <div className={classes.mainDescription}>
+            <div className={classes.left}>
+              <div className={classes.userPhoto}>
+                <Avatar>
+                  <PersonIcon />
+                </Avatar>
+                <span>{appartmentDetails.user.name}</span>
               </div>
-            ))}
-          </Carousel>
+              <Typography>
+                {appartmentDetails.description}
+              </Typography>
+            </div>
+            <div className={classes.right}>
+              <div className={classes.userPhoto}>
+                <Avatar>
+                  <WifiIcon />
+                </Avatar>
+                <span>Wi-Fi</span>
+              </div>
+              <div className={classes.userPhoto}>
+                <Avatar>
+                  <HotelIcon />
+                </Avatar>
+                <span>1 ліжко</span>
+              </div>
+              <div className={classes.userPhoto}>
+                <Avatar>
+                  <PetsIcon />
+                </Avatar>
+                <span>Тварини дозволяються</span>
+              </div>
+              <div className={classes.userPhoto}>
+                <Avatar>
+                  <BathtubIcon />
+                </Avatar>
+                <span>Душ</span>
+              </div>
+            </div>
+          </div>
+          <Typography variant="h5" style={{marginBottom: "12px"}}>
+            Розташування
+          </Typography>
+          <Map center={appartmentDetails.coords} zoom={13} style={{height: "400px"}}>
+            <TileLayer
+              attribution='&amp;copy <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+              url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+            />
+            <Marker position={appartmentDetails.coords} />
+          </Map>
         </Container>
-        <div className={classes.mainDescription}>
-          <div className={classes.left}>
-            <div className={classes.userPhoto}>
-              <Avatar>
-                <PersonIcon />
-              </Avatar>
-              <span>{appartmentDetails.user.name}</span>
-            </div>
-            <Typography>
-              {appartmentDetails.description}
-            </Typography>
-          </div>
-          <div className={classes.right}>
-            <div className={classes.userPhoto}>
-              <Avatar>
-                <WifiIcon />
-              </Avatar>
-              <span>Wi-Fi</span>
-            </div>
-            <div className={classes.userPhoto}>
-              <Avatar>
-                <HotelIcon />
-              </Avatar>
-              <span>1 ліжко</span>
-            </div>
-            <div className={classes.userPhoto}>
-              <Avatar>
-                <PetsIcon />
-              </Avatar>
-              <span>Тварини дозволяються</span>
-            </div>
-            <div className={classes.userPhoto}>
-              <Avatar>
-                <BathtubIcon />
-              </Avatar>
-              <span>Душ</span>
-            </div>
-          </div>
-        </div>
-        <Typography variant="h5" style={{marginBottom: "12px"}}>
-          Розташування
-        </Typography>
-        <Map center={appartmentDetails.coords} zoom={13} style={{height: "400px"}}>
-          <TileLayer
-            attribution='&amp;copy <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
-            url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-          />
-          <Marker position={appartmentDetails.coords} />
-        </Map>
-      </Container>
-    </ContentPage>
+      </ContentPage>
+    </>
   );
 }
