@@ -1,27 +1,27 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "436cf931b94931c185a23cda6fd8e496",
+    "revision": "5a8b4aa71ac1ae3cb9feeb7ea8b34f89",
     "url": "/couchsurfing_kma/index.html"
   },
   {
-    "revision": "061b68fc92e01ce4de71",
+    "revision": "26dca7eb5f26c872d8e7",
     "url": "/couchsurfing_kma/static/css/2.240942cf.chunk.css"
   },
   {
-    "revision": "7f87aca2989d991d3e53",
+    "revision": "0fdf0c17175a3a8cf12a",
     "url": "/couchsurfing_kma/static/css/main.7e81d27e.chunk.css"
   },
   {
-    "revision": "061b68fc92e01ce4de71",
-    "url": "/couchsurfing_kma/static/js/2.f067b817.chunk.js"
+    "revision": "26dca7eb5f26c872d8e7",
+    "url": "/couchsurfing_kma/static/js/2.986ca5a7.chunk.js"
   },
   {
     "revision": "d74572570e186f6ae88a022c545035d6",
-    "url": "/couchsurfing_kma/static/js/2.f067b817.chunk.js.LICENSE.txt"
+    "url": "/couchsurfing_kma/static/js/2.986ca5a7.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "7f87aca2989d991d3e53",
-    "url": "/couchsurfing_kma/static/js/main.2ab4d899.chunk.js"
+    "revision": "0fdf0c17175a3a8cf12a",
+    "url": "/couchsurfing_kma/static/js/main.5fecaf61.chunk.js"
   },
   {
     "revision": "abec9312d606076ca587",
