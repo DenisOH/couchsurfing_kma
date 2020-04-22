@@ -222,10 +222,10 @@ export default function DetailedListing() {
           <Typography variant="h5" style={{marginBottom: "12px"}}>
             Розташування
           </Typography>
-          <Map center={appartmentDetails.coords} zoom={13} style={{height: "400px"}}>
+          <Map center={appartmentDetails.coords} zoom={15} style={{height: "400px"}}>
             <TileLayer
               attribution='&amp;copy <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
-              url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+              url="https://{s}.basemaps.cartocdn.com/rastertiles/voyager_labels_under/{z}/{x}/{y}.png"
             />
             <Marker position={appartmentDetails.coords} />
           </Map>

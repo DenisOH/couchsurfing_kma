@@ -20,7 +20,6 @@ const useStyles = makeStyles((theme) => ({
 export default function NavLinkButton(props) {
   const classes = useStyles();
   const {className, to, children, isContained} = props;
-  console.log(isContained);
 
   return (
     <Button

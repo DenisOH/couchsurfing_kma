@@ -11,6 +11,7 @@ import About from "./containers/About";
 import Listings from "./containers/Listings";
 import DetailedListing from "./containers/DetailedListing";
 import Profile from "./containers/Profile";
+import AddListing from "./containers/AddListing";
 
 import './App.css';
 
@@ -63,6 +64,9 @@ function App() {
           </Route>
           <Route path="/listings">
             <Listings />
+          </Route>
+          <Route path="/add-listing">
+            <AddListing />
           </Route>
           <Route path="/profiles/:id">
             <Profile />
