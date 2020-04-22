@@ -1,19 +1,19 @@
 {
   "files": {
     "main.css": "/couchsurfing_kma/static/css/main.7e81d27e.chunk.css",
-    "main.js": "/couchsurfing_kma/static/js/main.459445c4.chunk.js",
-    "main.js.map": "/couchsurfing_kma/static/js/main.459445c4.chunk.js.map",
+    "main.js": "/couchsurfing_kma/static/js/main.2ab4d899.chunk.js",
+    "main.js.map": "/couchsurfing_kma/static/js/main.2ab4d899.chunk.js.map",
     "runtime-main.js": "/couchsurfing_kma/static/js/runtime-main.3859c8bf.js",
     "runtime-main.js.map": "/couchsurfing_kma/static/js/runtime-main.3859c8bf.js.map",
     "static/css/2.240942cf.chunk.css": "/couchsurfing_kma/static/css/2.240942cf.chunk.css",
-    "static/js/2.4ee71221.chunk.js": "/couchsurfing_kma/static/js/2.4ee71221.chunk.js",
-    "static/js/2.4ee71221.chunk.js.map": "/couchsurfing_kma/static/js/2.4ee71221.chunk.js.map",
+    "static/js/2.f067b817.chunk.js": "/couchsurfing_kma/static/js/2.f067b817.chunk.js",
+    "static/js/2.f067b817.chunk.js.map": "/couchsurfing_kma/static/js/2.f067b817.chunk.js.map",
     "index.html": "/couchsurfing_kma/index.html",
-    "precache-manifest.a73e6eff0eadfa6458e890b99ef79637.js": "/couchsurfing_kma/precache-manifest.a73e6eff0eadfa6458e890b99ef79637.js",
+    "precache-manifest.cfb886d321ece0f6f38255eba651082e.js": "/couchsurfing_kma/precache-manifest.cfb886d321ece0f6f38255eba651082e.js",
     "service-worker.js": "/couchsurfing_kma/service-worker.js",
     "static/css/2.240942cf.chunk.css.map": "/couchsurfing_kma/static/css/2.240942cf.chunk.css.map",
     "static/css/main.7e81d27e.chunk.css.map": "/couchsurfing_kma/static/css/main.7e81d27e.chunk.css.map",
-    "static/js/2.4ee71221.chunk.js.LICENSE.txt": "/couchsurfing_kma/static/js/2.4ee71221.chunk.js.LICENSE.txt",
+    "static/js/2.f067b817.chunk.js.LICENSE.txt": "/couchsurfing_kma/static/js/2.f067b817.chunk.js.LICENSE.txt",
     "static/media/about1.png": "/couchsurfing_kma/static/media/about1.e6be0407.png",
     "static/media/about2.png": "/couchsurfing_kma/static/media/about2.46f093fe.png",
     "static/media/main-background.png": "/couchsurfing_kma/static/media/main-background.3b701f56.png"
@@ -21,8 +21,8 @@
   "entrypoints": [
     "static/js/runtime-main.3859c8bf.js",
     "static/css/2.240942cf.chunk.css",
-    "static/js/2.4ee71221.chunk.js",
+    "static/js/2.f067b817.chunk.js",
     "static/css/main.7e81d27e.chunk.css",
-    "static/js/main.459445c4.chunk.js"
+    "static/js/main.2ab4d899.chunk.js"
   ]
 }
