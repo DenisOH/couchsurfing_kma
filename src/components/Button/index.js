@@ -3,7 +3,7 @@ import Button from "@material-ui/core/Button";
 import Typography from "@material-ui/core/Typography";
 import PropTypes from "prop-types";
 
-export default function NavLinkButton(props) {
+export default function CustomButton(props) {
   const {className, children, onClick} = props;
 
   return (
@@ -20,7 +20,7 @@ export default function NavLinkButton(props) {
   );
 }
 
-NavLinkButton.propTypes = {
+CustomButton.propTypes = {
   className: PropTypes.string,
   children: PropTypes.node.isRequired,
   onClick: PropTypes.func,

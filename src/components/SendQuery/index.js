@@ -33,11 +33,12 @@ const count = [
   },
 ];
 
-const useStyles = makeStyles(() => ({
+const useStyles = makeStyles((theme) => ({
   root: {
     "& .MuiDialog-paper": {
       width: "50vw",
       maxWidth: "none",
+      paddingBottom: theme.spacing(2),
     },
   },
 }));

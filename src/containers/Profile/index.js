@@ -6,6 +6,8 @@ import {makeStyles} from "@material-ui/core/styles";
 import Avatar from "@material-ui/core/Avatar";
 import PersonIcon from '@material-ui/icons/Person';
 import Divider from "@material-ui/core/Divider";
+import Typography from "@material-ui/core/Typography";
+import NavLinkButton from "../../components/NavLinkButton";
 
 const userData = {
   1: {
@@ -56,6 +58,12 @@ const useStyles = makeStyles((theme) => ({
       color: "white",
       marginRight: theme.spacing(2),
     }
+  },
+  appartments: {
+    marginTop: theme.spacing(2),
+  },
+  notFound: {
+    marginBottom: theme.spacing(2),
   }
 }));
 
@@ -109,6 +117,14 @@ export default function Profile() {
           </div>
         </div>
         <Divider />
+        <div className={classes.appartments}>
+          <Typography variant="h5" className={classes.notFound}>
+            Ви ще не додали жодних житл...
+          </Typography>
+          <NavLinkButton to="/add-listing" isContained={true}>
+            ДОДАТИ
+          </NavLinkButton>
+        </div>
       </Container>
     </ContentPage>
   );

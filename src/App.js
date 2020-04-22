@@ -17,6 +17,7 @@ import './App.css';
 const authViews = [
   "#/listings",
   "#/profiles",
+  "#/add-listing",
 ];
 
 const isAuthed = (loc) => {

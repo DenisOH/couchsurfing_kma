@@ -19,7 +19,8 @@ const useStyles = makeStyles((theme) => ({
 
 export default function NavLinkButton(props) {
   const classes = useStyles();
-  const {className, to, children} = props;
+  const {className, to, children, isContained} = props;
+  console.log(isContained);
 
   return (
     <Button
@@ -27,7 +28,7 @@ export default function NavLinkButton(props) {
       type="button"
       component={NavLink}
       to={to}
-      className={className}
+      className={`${className} ${!!isContained && `MuiButton-contained ${classes.containedButton}`}`}
       activeClassName={`MuiButton-contained ${classes.containedButton}`}
     >
       <Typography color="inherit" style={{fontWeight: 600}}>{children}</Typography>
@@ -39,4 +40,5 @@ NavLinkButton.propTypes = {
   className: PropTypes.string,
   to: PropTypes.string,
   children: PropTypes.node.isRequired,
+  isContained: PropTypes.bool,
 };
